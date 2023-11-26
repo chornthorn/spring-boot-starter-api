@@ -12,6 +12,7 @@ These instructions will get you a copy of the project up and running on your loc
 - Maven
 - IntelliJ IDEA 2023.2.5 or any preferred IDE
 - Docker Engine 20.10.8 or higher
+- Keycloak 22.0.2 or higher
 
 ### Installing
 
@@ -36,3 +37,79 @@ Explain how to run the automated tests for this system.
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
+
+## Project Structure (tree)
+
+```bash
+├── LICENSE
+├── README.md
+├── docker-compose.yaml
+├── mvnw
+├── mvnw.cmd
+├── pom.xml
+└── src
+    ├── main
+    │   ├── java
+    │   │   └── com
+    │   │       └── khodedev
+    │   │           └── app
+    │   │               ├── Application.java
+    │   │               ├── auth
+    │   │               │   ├── AuthController.java
+    │   │               │   ├── AuthService.java
+    │   │               │   └── dto
+    │   │               │       ├── LoginDto.java
+    │   │               │       ├── LoginResDto.java
+    │   │               │       └── RegisterDto.java
+    │   │               ├── common
+    │   │               │   ├── advice
+    │   │               │   │   └── CustomResponseBodyAdvice.java
+    │   │               │   ├── annotations
+    │   │               │   │   ├── PreAuthz.java
+    │   │               │   │   ├── Public.java
+    │   │               │   │   └── SkipResponseWrapper.java
+    │   │               │   ├── config
+    │   │               │   │   ├── ApplicationConfig.java
+    │   │               │   │   └── SecurityConfig.java
+    │   │               │   ├── constants
+    │   │               │   │   └── Constants.java
+    │   │               │   ├── controllers
+    │   │               │   │   └── CustomErrorController.java
+    │   │               │   ├── exceptions
+    │   │               │   │   ├── BadRequestException.java
+    │   │               │   │   ├── ForbiddenException.java
+    │   │               │   │   ├── GlobalExceptionHandler.java
+    │   │               │   │   ├── InternalServerErrorException.java
+    │   │               │   │   ├── NotFoundException.java
+    │   │               │   │   ├── UnauthorizedException.java
+    │   │               │   │   └── UnprocessableEntityException.java
+    │   │               │   ├── filters
+    │   │               │   │   ├── JwtAuthenticationFilter.java
+    │   │               │   │   ├── PreAuthzFilter.java
+    │   │               │   │   └── PublicAccessFilter.java
+    │   │               │   ├── services
+    │   │               │   │   ├── JwtTokenValidator.java
+    │   │               │   │   └── KeycloakAuthorizationService.java
+    │   │               │   └── types
+    │   │               │       ├── ErrorResponse.java
+    │   │               │       ├── ResponseWrapper.java
+    │   │               │       └── Scope.java
+    │   │               └── user
+    │   │                   ├── UserController.java
+    │   │                   ├── UserRepository.java
+    │   │                   ├── UserService.java
+    │   │                   ├── dto
+    │   │                   │   ├── CreateUserDto.java
+    │   │                   │   └── UpdateUserDto.java
+    │   │                   └── entities
+    │   │                       └── User.java
+    │   └── resources
+    │       └── application.properties
+    └── test
+        └── java
+            └── com
+                └── khodedev
+                    └── app
+                        └── ApplicationTests.java
+
+```
