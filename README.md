@@ -1,6 +1,6 @@
 # Spring Boot RESTful API
 
-This is a Java-based project using Spring Boot and Maven. The project is structured around a RESTful API and includes JWT authentication and custom response body advice.
+This is a Java-based project using Spring Boot and Maven. The project is structured around a RESTful API and includes JWT authentication and keycloak and custom response body advice.
 
 ## Getting Started
 
@@ -29,14 +29,11 @@ Explain how to run the automated tests for this system.
 - [Java](https://www.java.com/) - The programming language used
 - [Spring Boot](https://spring.io/projects/spring-boot) - The framework used
 - [Maven](https://maven.apache.org/) - Dependency Management
+- [Keycloak](https://www.keycloak.org/) - Open Source Identity and Access Management
 
 ## Authors
 
 - CHORN Thorn
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
 
 ## Project Structure (tree)
 
@@ -113,3 +110,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
                         └── ApplicationTests.java
 
 ```
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
